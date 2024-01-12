@@ -1,4 +1,3 @@
 collatex
 python-levenshtein
 graphviz
-json
