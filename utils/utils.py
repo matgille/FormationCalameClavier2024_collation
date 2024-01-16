@@ -4,6 +4,16 @@ def test():
     print("OK")
 
 
+def print_first_token(full_dict):
+    dict_premier_token = dict()
+    dict_premier_token['witnesses'] = list()
+    dict_premier_token['witnesses'].append({'id': 'Bodmer47', 'tokens': [full_dict['witnesses'][0]['tokens'][0]]})
+    dict_premier_token['witnesses'].append({'id': 'O1', 'tokens': [full_dict['witnesses'][1]['tokens'][0]]})
+    dict_premier_token['witnesses'].append({'id': 'G2', 'tokens': [full_dict['witnesses'][2]['tokens'][0]]})
+    json_str = json.dumps(dict_premier_token, indent=4)
+    print(json_str)
+
+
 # Deux fonctions permettant de produire les données au format qui est nécessité par collatex
 def import_annotated_data(text_path:str):
     with open(text_path, "r") as input_text:
